@@ -7,3 +7,7 @@ go build -o gobby
 docker build -t gobby .
 docker image ls
 docker run -p 9999:9999 gobby
+
+# observability:
+    - Prometheus
+    - Grafana
