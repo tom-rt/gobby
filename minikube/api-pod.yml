@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-pod
+spec:
+  containers:
+    - name: gobby-api
+      image: tomrt/gobby:latest
+      ports:
+        - containerPort: 80
