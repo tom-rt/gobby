@@ -1,5 +1,5 @@
 # gobby
-Cloud native golang project seed, including observability stack
+This repository contains the source code of gobby, an open source identity and access management solution.
 
 # app
 cd app
