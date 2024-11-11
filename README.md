@@ -1,4 +1,4 @@
-# What is gobby ?
+# Gobby
 This repository contains the source code of gobby, an open source identity and access management solution, meant to be deployed in kubernetes.
 
 # Roadmap
