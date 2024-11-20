@@ -37,3 +37,19 @@ minikube start --nodes 3 -p gobby-cluster
 ## apply pod only
 kubectl apply -f minikube/api-pod.yml
 
+# Roadmap
+
+## DONE
+Setup FIBER
+SETUP zerolog
+
+## TODO API:
+Run with podman
+Setup HUMA
+Setup few tests
+Setup opentelemetry with otelfiber
+Setup html templates generator ?
+
+## TODO FRONT
+Setup htmx
+Setup tailwind
