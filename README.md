@@ -15,21 +15,25 @@ Using zerolog for logging with the fiber zerolog middleware.
 
 For observability, opentelemetry for tracing and metrics. Integrating thanks to the otelfiber middleware.
 
-
 # How to deploy and build ?
 ## API
 cd app
 go build -o gobby
+
+## Run locally with docker:
+colima start
 docker build -t gobby . --progress=plain --no-cache
+docker run -p 9999:9999 gobby
+
+## Run locally with podman:
+podman machine start
+podman build -t gobby .
+podman run -p 9999:9999 gobby
 
 ## Upload to dockerhub:
 docker login
 docker tag gobby tomrt/gobby
 docker image push tomrt/gobby
-
-## Run locally:
-docker image ls
-docker run -p 9999:9999 gobby
 
 ## Start a minikube cluster
 minikube start --nodes 3 -p gobby-cluster
@@ -44,7 +48,6 @@ Setup FIBER
 SETUP zerolog
 
 ## TODO API:
-Run with podman
 Setup HUMA
 Setup few tests
 Setup opentelemetry with otelfiber
