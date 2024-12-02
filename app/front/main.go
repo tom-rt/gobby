@@ -4,13 +4,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/a-h/templ"
+	templlib "github.com/a-h/templ"
+	"github.com/tom-rt/gobby/templ"
 )
 
 func main() {
-	component := hello("Templ!")
-	http.Handle("/", templ.Handler(component))
+	component := templ.Hello("toto")
+	http.Handle("/", templlib.Handler(component))
 
-	fmt.Println("Listening on port 3000 🚀")
+	fmt.Println("listening on port 3000")
 	http.ListenAndServe(":3000", nil)
 }
