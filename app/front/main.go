@@ -4,14 +4,18 @@ import (
 	"fmt"
 	"net/http"
 
-	templlib "github.com/a-h/templ"
-	"github.com/tom-rt/gobby/templ"
+	"github.com/a-h/templ"
+	"github.com/tom-rt/gobby/template"
 )
 
 func main() {
-	component := templ.Hello("toto")
-	http.Handle("/", templlib.Handler(component))
+	component := template.Hello("toto")
+	http.Handle("/", templ.Handler(component))
 
-	fmt.Println("listening on port 3000")
+	// server static files
+	fs := http.FileServer(http.Dir("./static"))
+	http.Handle("/static/", fs)
+
+	fmt.Println("Listening on :3000")
 	http.ListenAndServe(":3000", nil)
 }
