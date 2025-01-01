@@ -8,6 +8,8 @@ The front end app will be built using htmx, templ and tailwind.
 # How to deploy and build ?
 ### Generate templ files:
 cd templ && templ generate
+### Refresh one liner:
+cd template && templ generate && cd .. && go build main.go && ./main
 
 ## TODO
 Make a nice looking login page
