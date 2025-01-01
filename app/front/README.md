@@ -1,3 +1,6 @@
+# Doc
+https://templ.guide/
+https://www.magicbell.com/blog/setting-up-htmx-and-templ-for-go
 
 # API stack
 The front end app will be built using htmx, templ and tailwind.
@@ -13,5 +16,3 @@ Setup tailwind
 
 ## DONE
 Init htmx and templ
-
-https://www.magicbell.com/blog/setting-up-htmx-and-templ-for-go
